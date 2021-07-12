@@ -1,0 +1,9 @@
+server:
+  port: 8480
+  servlet:
+    context-path: /app1
+spring:
+  application:
+    name: frontend1
+  profiles:
+    active: #spring.profiles.active#
