@@ -1,0 +1,35 @@
+[1;32m2021-07-13 02:38:23.311 INFO  c.j.f.frontend1.Frontend1Application    :55 - Starting Frontend1Application using Java 1.8.0_292 on kowsar-ThinkPad-T460s with PID 892 (/home/kowsar/kowsar/Projects/SelfProj/job/ventura/dice-board/frontend1/target/classes started by kowsar in /home/kowsar/kowsar/Projects/SelfProj/job/ventura/dice-board)
+[0m[1;32m2021-07-13 02:38:23.321 INFO  c.j.f.frontend1.Frontend1Application    :659 - No active profile set, falling back to default profiles: dev
+[0m[1;32m2021-07-13 02:38:24.961 INFO  .s.d.r.c.RepositoryConfigurationDelegate:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[0m[1;32m2021-07-13 02:38:24.998 INFO  .s.d.r.c.RepositoryConfigurationDelegate:201 - Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+[0m[1;32m2021-07-13 02:38:26.178 INFO  o.s.b.w.e.tomcat.TomcatWebServer        :108 - Tomcat initialized with port(s): 8480 (http)
+[0m[1;32m2021-07-13 02:38:26.195 INFO  o.a.coyote.http11.Http11NioProtocol     :173 - Initializing ProtocolHandler ["http-nio-8480"]
+[0m[1;32m2021-07-13 02:38:26.196 INFO  o.a.catalina.core.StandardService       :173 - Starting service [Tomcat]
+[0m[1;32m2021-07-13 02:38:26.196 INFO  o.a.catalina.core.StandardEngine        :173 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+[0m[1;32m2021-07-13 02:38:26.291 INFO  o.a.c.c.C.[.[localhost].[/app1]         :173 - Initializing Spring embedded WebApplicationContext
+[0m[1;32m2021-07-13 02:38:26.291 INFO  w.s.c.ServletWebServerApplicationContext:290 - Root WebApplicationContext: initialization completed in 2800 ms
+[0m[1;32m2021-07-13 02:38:26.367 INFO  com.zaxxer.hikari.HikariDataSource      :110 - HikariPool-1 - Starting...
+[0m[1;32m2021-07-13 02:38:26.751 INFO  com.zaxxer.hikari.HikariDataSource      :123 - HikariPool-1 - Start completed.
+[0m[1;32m2021-07-13 02:38:26.762 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration    :68 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[0m[1;32m2021-07-13 02:38:28.236 INFO  j.LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[0m[1;33m2021-07-13 02:38:28.421 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[0m[1;32m2021-07-13 02:38:28.647 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping   :53 - Adding welcome page: class path resource [static/index.html]
+[0m[1;32m2021-07-13 02:38:28.895 INFO  o.a.coyote.http11.Http11NioProtocol     :173 - Starting ProtocolHandler ["http-nio-8480"]
+[0m[1;32m2021-07-13 02:38:28.928 INFO  o.s.b.w.e.tomcat.TomcatWebServer        :220 - Tomcat started on port(s): 8480 (http) with context path '/app1'
+[0m[1;32m2021-07-13 02:38:28.942 INFO  c.j.f.frontend1.Frontend1Application    :61 - Started Frontend1Application in 6.761 seconds (JVM running for 7.865)
+[0m[1;32m2021-07-13 02:38:28.947 INFO  c.j.f.frontend1.Frontend1Application    :63 - 
+----------------------------------------------------------
+	Application 'frontend1' is running! Access URLs:
+	Local: 		http://localhost:8480/app1
+	External: 	http://127.0.1.1:8480/app1
+	Profile(s): 	[]
+----------------------------------------------------------
+[0m[1;32m2021-07-13 02:38:58.033 INFO  o.a.c.c.C.[.[localhost].[/app1]         :173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[0m[1;32m2021-07-13 02:38:58.034 INFO  o.s.web.servlet.DispatcherServlet       :525 - Initializing Servlet 'dispatcherServlet'
+[0m[1;32m2021-07-13 02:38:58.036 INFO  o.s.web.servlet.DispatcherServlet       :547 - Completed initialization in 1 ms
+[0m[1;32m2021-07-13 02:38:58.425 INFO  c.j.f.f.c.DiceBoardController           :37 - Request received for board initiation for number of player: 4
+[0m[1;32m2021-07-13 02:38:58.430 INFO  c.j.f.f.c.DiceBoardController           :39 - Successfully board initiate with response: <200 OK OK,BoardInitResponse(data=Board(playerList=[Player(order=1, totalScore=0, lastScore=0, playerName=Player 1, doseDiceHolder=No, doseHitSix=No, sixAndNotFour=No), Player(order=2, totalScore=0, lastScore=0, playerName=Player 2, doseDiceHolder=No, doseHitSix=No, sixAndNotFour=No), Player(order=3, totalScore=0, lastScore=0, playerName=Player 3, doseDiceHolder=No, doseHitSix=No, sixAndNotFour=No), Player(order=4, totalScore=0, lastScore=0, playerName=Player 4, doseDiceHolder=No, doseHitSix=No, sixAndNotFour=No)], boardStatus=Initiate, boardWinnerName=, boardWinnerId=0, playerNumber=4), userMessage=Successfully board initiate),[]>
+[0m[1;32m2021-07-13 02:39:31.683 INFO  j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+[0m[1;32m2021-07-13 02:39:31.688 INFO  com.zaxxer.hikari.HikariDataSource      :350 - HikariPool-1 - Shutdown initiated...
+[0m[1;32m2021-07-13 02:39:31.704 INFO  com.zaxxer.hikari.HikariDataSource      :352 - HikariPool-1 - Shutdown completed.
+[0m
