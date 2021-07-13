@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "a7808abe-159d-4e5a-a293-e6ba04fb37a8",
+		"name": "vantura-dice-board",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Board-init",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "4",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8480/app1/v1/dice-board/01/player/number",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8480",
+					"path": [
+						"app1",
+						"v1",
+						"dice-board",
+						"01",
+						"player",
+						"number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "start-game",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"playerList\": [\n            {\n                \"order\": 1,\n                \"totalScore\": 0,\n                \"lastScore\": 0,\n                \"playerName\": \"Kowsar\",\n                \"doseDiceHolder\": \"Yes\",\n                \"doseHitSix\": \"No\"\n            },\n            {\n                \"order\": 2,\n                \"totalScore\": 0,\n                \"lastScore\": 0,\n                \"playerName\": \"Zara\",\n                \"doseDiceHolder\": \"No\",\n                \"doseHitSix\": \"No\"\n            },\n            {\n                \"order\": 3,\n                \"totalScore\": 0,\n                \"lastScore\": 0,\n                \"playerName\": \"Saifan\",\n                \"doseDiceHolder\": \"No\",\n                \"doseHitSix\": \"No\"\n            },\n            {\n                \"order\": 4,\n                \"totalScore\": 0,\n                \"lastScore\": 0,\n                \"playerName\": \"Keya\",\n                \"doseDiceHolder\": \"No\",\n                \"doseHitSix\": \"No\",\n                \"sixAndNotFour\": \"No\"\n            }\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8480/app1/v1/dice-board/02/start/board",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8480",
+					"path": [
+						"app1",
+						"v1",
+						"dice-board",
+						"02",
+						"start",
+						"board"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8480/app1/v1/dice-board/roll/dice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8480/app1/v1/dice-board/03/roll/dice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8480",
+					"path": [
+						"app1",
+						"v1",
+						"dice-board",
+						"03",
+						"roll",
+						"dice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8480/app1/v1/dice-board/restart/board",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8480/app1/v1/dice-board/04/restart/board",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8480",
+					"path": [
+						"app1",
+						"v1",
+						"dice-board",
+						"04",
+						"restart",
+						"board"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
