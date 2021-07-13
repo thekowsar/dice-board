@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
+	<springProfile name="dev">
+		<property name="LOG_FILE" value="log/app-dev.log"/>
+
+	</springProfile>
 	<property scope="context" name="COLORIZER_COLORS" value="boldred@,boldyellow@,boldgreen@,boldcyan@,boldblue@" />
 	<conversionRule conversionWord="colorize" converterClass="org.tuxdude.logback.extensions.LogColorizer" />
 

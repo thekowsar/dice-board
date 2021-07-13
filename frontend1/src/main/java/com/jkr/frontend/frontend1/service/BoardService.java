@@ -11,6 +11,7 @@ import com.jkr.frontend.frontend1.util.Constant;
 import com.jkr.frontend.frontend1.util.DiceClient;
 import com.jkr.frontend.frontend1.util.ExceptionHandlerUtil;
 import com.jkr.frontend.frontend1.util.Messages;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ import java.util.List;
 
 @Slf4j
 @Service
+@NoArgsConstructor
 public class BoardService {
 
     //@Autowired
@@ -32,6 +34,10 @@ public class BoardService {
     DiceClient diceClient;
 
     private Board board = new Board();
+
+    public BoardService (Board board){
+        this.board = board;
+    }
 
     public ResponseEntity<BoardInitResponse> initBoard(int playerNumber) throws ExceptionHandlerUtil {
         if(!Strings.isBlank(board.getBoardStatus())){
@@ -115,14 +121,14 @@ public class BoardService {
     }
 
     public ResponseEntity<BoardRollDiceResponse>   rollDice() throws ExceptionHandlerUtil {
-        if(Strings.isBlank(board.getBoardStatus()) || !board.getBoardStatus().equalsIgnoreCase(Constant.BOARD_STATUS_RUNNING)){
-            log.debug(Messages.BOARD_IS_NOT_RUNNING);
-            throw new ExceptionHandlerUtil(HttpStatus.BAD_REQUEST, Messages.BOARD_IS_NOT_RUNNING);
-
-        }
         if(board.getBoardStatus().equalsIgnoreCase(Constant.BOARD_STATUS_OVER)){
             log.debug(Messages.GAME_OVER);
             throw new ExceptionHandlerUtil(HttpStatus.BAD_REQUEST, Messages.GAME_OVER);
+
+        }
+        if(Strings.isBlank(board.getBoardStatus()) || !board.getBoardStatus().equalsIgnoreCase(Constant.BOARD_STATUS_RUNNING)){
+            log.debug(Messages.BOARD_IS_NOT_RUNNING);
+            throw new ExceptionHandlerUtil(HttpStatus.BAD_REQUEST, Messages.BOARD_IS_NOT_RUNNING);
 
         }
         BoardRollDiceResponse response = null;
